@@ -86,6 +86,21 @@ def qq_open():
         duration=1,
         double_click=False,
     )
+    # 点击消息图标
+    if find_and_click(
+        "images/qq_images/message.png",
+        confidence=0.8,
+        grayscale=True,
+        duration=1,
+        double_click=False,
+    ) is False:
+        find_and_click(
+            "images/qq_images/message1.png",
+            confidence=0.8,
+            grayscale=True,
+            duration=1,
+            double_click=False,
+        )
     # 点击搜索框
     find_and_click(
         "images/qq_images/search.png",
@@ -97,7 +112,7 @@ def qq_open():
 
     # input the content
     # ptg.press("shift")
-    ptg.write("shaodonglin")
+    ptg.write("sishuisihuo")
 
     # push engter browse url
     time.sleep(0.5)
@@ -107,7 +122,7 @@ def qq_open():
 
     # 翻滚查找头像
     scroll_for_image(
-        "images/qq_images/donglin.png",
+        "images/qq_images/object.png",
         confidence=0.8,
         grayscale=True,
         check_interval=1,
@@ -115,26 +130,26 @@ def qq_open():
     )
     # 点击头像
     find_and_click(
-        "images/qq_images/donglin.png",
+        "images/qq_images/object.png",
         confidence=0.8,
         grayscale=True,
         duration=1,
         double_click=False,
     )
-
+    time.sleep(0.5)
     # 点击表情下方的输入框
     find_and_click(
         "images/qq_images/smile.png",
         confidence=0.8,
         grayscale=True,
         duration=1,
-        offset=(0, 20),
+        offset=(0, 30),
         double_click=False,
     )
 
     # input the content
     # ptg.press("shift")
-    ptg.write("hi, donglin")
+    ptg.write("hi")
 
     # push engter browse url
     time.sleep(0.5)
